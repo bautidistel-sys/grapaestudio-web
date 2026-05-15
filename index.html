@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="styles.css?v=20260515" />
+  <link rel="stylesheet" href="styles.css?v=20260516-3" />
 </head>
 <body>
 
@@ -291,7 +291,47 @@
           </div>
         </article>
 
+        <!-- Panel de detalle — vive dentro del grid, JS lo reposiciona -->
+        <div class="pdetalle" id="pdetalle">
+          <div class="pdetalle-inner">
+            <div class="pdetalle-topbar">
+              <button type="button" id="pdetalle-close-btn" class="pdetalle-close">
+                <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" aria-hidden="true">
+                  <path d="M18 6 6 18M6 6l12 12"/>
+                </svg>
+                Cerrar
+              </button>
+            </div>
+            <div class="pdetalle-grid">
+              <div class="pdetalle-img-wrap">
+                <img id="pd-img" src="" alt="" />
+              </div>
+              <div class="pdetalle-body">
+                <p class="pdetalle-cat" id="pd-cat"></p>
+                <h3 class="pdetalle-title" id="pd-title"></h3>
+                <p class="pdetalle-year" id="pd-year"></p>
+                <p class="pdetalle-desc" id="pd-desc"></p>
+                <dl class="pdetalle-facts">
+                  <div class="pdetalle-fact">
+                    <dt>Ubicación</dt>
+                    <dd id="pd-ubicacion"></dd>
+                  </div>
+                  <div class="pdetalle-fact">
+                    <dt>Superficie</dt>
+                    <dd id="pd-sup"></dd>
+                  </div>
+                  <div class="pdetalle-fact">
+                    <dt>Servicios</dt>
+                    <dd id="pd-servicios"></dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </section>
 
@@ -496,44 +536,9 @@
     </svg>
   </a>
 
-  <!-- PROJECT DETAIL MODAL -->
-  <div id="proyecto-modal" class="pmodal" aria-modal="true" role="dialog" aria-label="Detalle de proyecto" hidden>
-    <div class="pmodal-backdrop"></div>
-    <div class="pmodal-panel">
-      <button class="pmodal-close" aria-label="Cerrar detalle">
-        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round">
-          <path d="M18 6 6 18M6 6l12 12"/>
-        </svg>
-      </button>
-      <div class="pmodal-img-wrap">
-        <img id="pmodal-img" src="" alt="" />
-      </div>
-      <div class="pmodal-body">
-        <p class="pmodal-cat" id="pmodal-cat"></p>
-        <h2 class="pmodal-title" id="pmodal-title"></h2>
-        <p class="pmodal-year" id="pmodal-year"></p>
-        <p class="pmodal-desc" id="pmodal-desc"></p>
-        <dl class="pmodal-details">
-          <div class="pmodal-detail">
-            <dt>Ubicación</dt>
-            <dd id="pmodal-ubicacion"></dd>
-          </div>
-          <div class="pmodal-detail">
-            <dt>Superficie</dt>
-            <dd id="pmodal-sup"></dd>
-          </div>
-          <div class="pmodal-detail">
-            <dt>Servicios</dt>
-            <dd id="pmodal-servicios"></dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-  </div>
-
   <!-- Scripts -->
   <script defer src="lib/gsap.min.js"></script>
   <script defer src="lib/ScrollTrigger.min.js"></script>
-  <script defer src="main.js?v=20260515"></script>
+  <script defer src="main.js?v=20260516-3"></script>
 </body>
 </html>

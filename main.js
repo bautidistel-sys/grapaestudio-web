@@ -240,23 +240,42 @@
     });
   }
 
-  /* ── PROJECT MODAL ──────────────────────────────────────── */
+  /* ── PROYECTO DETALLE (panel inline, se posiciona bajo la fila) */
   function initModal() {
-    var modal = qs("#proyecto-modal");
-    if (!modal) return;
+    var panel    = qs("#pdetalle");
+    if (!panel) return;
 
-    var backdrop  = qs(".pmodal-backdrop", modal);
-    var closeBtn  = qs(".pmodal-close", modal);
-    var imgEl     = qs("#pmodal-img");
-    var catEl     = qs("#pmodal-cat");
-    var titleEl   = qs("#pmodal-title");
-    var yearEl    = qs("#pmodal-year");
-    var descEl    = qs("#pmodal-desc");
-    var ubicEl    = qs("#pmodal-ubicacion");
-    var supEl     = qs("#pmodal-sup");
-    var servicEl  = qs("#pmodal-servicios");
+    var closeBtn = qs("#pdetalle-close-btn");
+    var imgEl    = qs("#pd-img");
+    var catEl    = qs("#pd-cat");
+    var titleEl  = qs("#pd-title");
+    var yearEl   = qs("#pd-year");
+    var descEl   = qs("#pd-desc");
+    var ubicEl   = qs("#pd-ubicacion");
+    var supEl    = qs("#pd-sup");
+    var servicEl = qs("#pd-servicios");
 
-    function openModal(card) {
+    var activeCard = null;
+
+    /* Devuelve el último card de la misma fila visual que `card` */
+    function lastCardInRow(card) {
+      var allCards = qsa(".proyecto-card").filter(function (c) {
+        return c.style.display !== "none";
+      });
+      var top = card.getBoundingClientRect().top;
+      var anchor = card;
+      allCards.forEach(function (c) {
+        if (Math.abs(c.getBoundingClientRect().top - top) < 10) {
+          anchor = c;
+        }
+      });
+      return anchor;
+    }
+
+    function openDetail(card) {
+      if (activeCard === card) { closeDetail(); return; }
+
+      /* Poblar contenido */
       var cardImg = card.querySelector(".proyecto-img-wrap img");
       imgEl.src = cardImg ? cardImg.src : "";
       imgEl.alt = cardImg ? cardImg.alt : "";
@@ -264,47 +283,80 @@
       var rawCat = card.dataset.cat || "";
       catEl.textContent = rawCat.charAt(0).toUpperCase() + rawCat.slice(1);
 
-      var h3 = card.querySelector("h3");
-      titleEl.textContent = h3 ? h3.textContent : "";
+      titleEl.textContent  = (card.querySelector("h3") || {}).textContent || "";
+      yearEl.textContent   = (card.querySelector(".proyecto-info p") || {}).textContent || "";
+      descEl.textContent   = card.dataset.desc      || "";
+      ubicEl.textContent   = card.dataset.ubicacion || "";
+      supEl.textContent    = card.dataset.sup       || "";
+      servicEl.textContent = card.dataset.servicios || "";
 
-      var meta = card.querySelector(".proyecto-info p");
-      yearEl.textContent = meta ? meta.textContent : "";
+      /* Mover el panel justo después del último card de esa fila */
+      var anchor = lastCardInRow(card);
+      anchor.parentNode.insertBefore(panel, anchor.nextSibling);
 
-      descEl.textContent    = card.dataset.desc      || "";
-      ubicEl.textContent    = card.dataset.ubicacion  || "";
-      supEl.textContent     = card.dataset.sup        || "";
-      servicEl.textContent  = card.dataset.servicios  || "";
+      /* Marcar tarjeta activa */
+      qsa(".proyecto-card").forEach(function (c) { c.classList.remove("is-active"); });
+      card.classList.add("is-active");
+      activeCard = card;
 
-      modal.hidden = false;
-      document.body.style.overflow = "hidden";
+      /* Abrir con animación */
+      panel.classList.remove("is-open");
       requestAnimationFrame(function () {
-        requestAnimationFrame(function () {
-          modal.classList.add("is-open");
-        });
+        panel.classList.add("is-open");
+        setTimeout(function () {
+          panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }, 80);
       });
     }
 
-    function closeModal() {
-      modal.classList.remove("is-open");
-      document.body.style.overflow = "";
-      setTimeout(function () { modal.hidden = true; }, 520);
+    function closeDetail() {
+      panel.classList.remove("is-open");
+      if (activeCard) activeCard.classList.remove("is-active");
+      activeCard = null;
     }
 
+    /* On touch devices, use touchend to avoid click-delay and pointer-event
+       issues inside overflow:hidden containers on mobile Chrome.
+       Guard against scroll gestures by tracking touch start position.   */
+    var TOUCH = ("ontouchstart" in window);
+
     qsa(".proyecto-card").forEach(function (card) {
-      card.addEventListener("click", function () { openModal(card); });
+      if (TOUCH) {
+        var touchStartY = 0;
+        card.addEventListener("touchstart", function (e) {
+          touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+        card.addEventListener("touchend", function (e) {
+          if (Math.abs(e.changedTouches[0].clientY - touchStartY) < 10) {
+            e.preventDefault();
+            openDetail(card);
+          }
+        });
+      } else {
+        card.addEventListener("click", function () { openDetail(card); });
+      }
       card.addEventListener("keydown", function (e) {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          openModal(card);
+          openDetail(card);
         }
       });
     });
 
-    closeBtn.addEventListener("click", closeModal);
-    backdrop.addEventListener("click", closeModal);
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && !modal.hidden) closeModal();
-    });
+    if (closeBtn) {
+      if (TOUCH) {
+        closeBtn.addEventListener("touchend", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          closeDetail();
+        });
+      } else {
+        closeBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          closeDetail();
+        });
+      }
+    }
   }
 
   /* ── PROCESO ANIMATIONS ─────────────────────────────────── */
