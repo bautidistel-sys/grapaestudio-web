@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════
    GRAPA Estudio — main.js
    Pattern: IIFE (no ES modules). Classic <script defer>.
-   v20260514
+   v20260515
 ═══════════════════════════════════════════════════════════ */
 (function () {
   "use strict";
@@ -219,12 +219,91 @@
         cards.forEach(function (card) {
           var cat = card.dataset.cat;
           if (filter === "all" || cat === filter) {
-            card.classList.remove("filtered-out");
+            /* Show: restore layout first, then fade in */
+            card.style.removeProperty("display");
+            requestAnimationFrame(function () {
+              requestAnimationFrame(function () {
+                card.classList.remove("filtered-out");
+              });
+            });
           } else {
+            /* Hide: fade out, then collapse */
             card.classList.add("filtered-out");
+            setTimeout(function () {
+              if (card.classList.contains("filtered-out")) {
+                card.style.display = "none";
+              }
+            }, 340);
           }
         });
       });
+    });
+  }
+
+  /* ── PROJECT MODAL ──────────────────────────────────────── */
+  function initModal() {
+    var modal = qs("#proyecto-modal");
+    if (!modal) return;
+
+    var backdrop  = qs(".pmodal-backdrop", modal);
+    var closeBtn  = qs(".pmodal-close", modal);
+    var imgEl     = qs("#pmodal-img");
+    var catEl     = qs("#pmodal-cat");
+    var titleEl   = qs("#pmodal-title");
+    var yearEl    = qs("#pmodal-year");
+    var descEl    = qs("#pmodal-desc");
+    var ubicEl    = qs("#pmodal-ubicacion");
+    var supEl     = qs("#pmodal-sup");
+    var servicEl  = qs("#pmodal-servicios");
+
+    function openModal(card) {
+      var cardImg = card.querySelector(".proyecto-img-wrap img");
+      imgEl.src = cardImg ? cardImg.src : "";
+      imgEl.alt = cardImg ? cardImg.alt : "";
+
+      var rawCat = card.dataset.cat || "";
+      catEl.textContent = rawCat.charAt(0).toUpperCase() + rawCat.slice(1);
+
+      var h3 = card.querySelector("h3");
+      titleEl.textContent = h3 ? h3.textContent : "";
+
+      var meta = card.querySelector(".proyecto-info p");
+      yearEl.textContent = meta ? meta.textContent : "";
+
+      descEl.textContent    = card.dataset.desc      || "";
+      ubicEl.textContent    = card.dataset.ubicacion  || "";
+      supEl.textContent     = card.dataset.sup        || "";
+      servicEl.textContent  = card.dataset.servicios  || "";
+
+      modal.hidden = false;
+      document.body.style.overflow = "hidden";
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          modal.classList.add("is-open");
+        });
+      });
+    }
+
+    function closeModal() {
+      modal.classList.remove("is-open");
+      document.body.style.overflow = "";
+      setTimeout(function () { modal.hidden = true; }, 520);
+    }
+
+    qsa(".proyecto-card").forEach(function (card) {
+      card.addEventListener("click", function () { openModal(card); });
+      card.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openModal(card);
+        }
+      });
+    });
+
+    closeBtn.addEventListener("click", closeModal);
+    backdrop.addEventListener("click", closeModal);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !modal.hidden) closeModal();
     });
   }
 
@@ -336,6 +415,7 @@
     safe(initHeroParallax, "initHeroParallax");
     safe(initReveals,      "initReveals");
     safe(initProyectos,    "initProyectos");
+    safe(initModal,        "initModal");
     safe(initProceso,      "initProceso");
     safe(initGSAP,         "initGSAP");
     safe(initForm,         "initForm");
