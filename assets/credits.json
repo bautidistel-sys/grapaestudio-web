@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "src": "assets/img/hero.jpg",
+    "title": "The stripped facade connects the two structures and the decks",
+    "creator": "Jeremy Levine Design",
+    "creator_url": "https://www.flickr.com/photos/25186605@N04",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/25186605@N04/17335007912",
+    "source": "flickr"
+  },
+  "proj-palermo": {
+    "src": "assets/img/proj-palermo.jpg",
+    "title": "Plage Colección My Wall",
+    "creator": "Plage Vinilos y Decoración",
+    "creator_url": "https://www.flickr.com/photos/59209848@N08",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/59209848@N08/5429083292",
+    "source": "flickr"
+  },
+  "proj-loft": {
+    "src": "assets/img/proj-loft.jpg",
+    "title": "Urbane Residents / Washington / One Bedroom / Mike",
+    "creator": "urbaneapts",
+    "creator_url": "https://www.flickr.com/photos/34170343@N02",
+    "license": "by-sa",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/34170343@N02/3183447589",
+    "source": "flickr"
+  },
+  "proj-estudio": {
+    "src": "assets/img/proj-estudio.jpg",
+    "title": "Analog camera behind computer laptop - Credit to https://homegets.com/",
+    "creator": "homegets.com",
+    "creator_url": "https://www.flickr.com/photos/141436406@N04",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/141436406@N04/49713573902",
+    "source": "flickr"
+  },
+  "proj-local": {
+    "src": "assets/img/proj-local.jpg",
+    "title": "multimedia desk",
+    "creator": "grantlairdjr",
+    "creator_url": "https://www.flickr.com/photos/48889108472@N01",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/48889108472@N01/147348118",
+    "source": "flickr"
+  },
+  "proj-countries": {
+    "src": "assets/img/proj-countries.jpg",
+    "title": "Monterrey Mexico",
+    "creator": "kevin dooley",
+    "creator_url": "https://www.flickr.com/photos/12836528@N00",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/12836528@N00/15969800079",
+    "source": "flickr"
+  },
+  "proj-recoleta": {
+    "src": "assets/img/proj-recoleta.jpg",
+    "title": "Bathroom Remodel",
+    "creator": "Jeremy Levine Design",
+    "creator_url": "https://www.flickr.com/photos/25186605@N04",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/25186605@N04/3122656639",
+    "source": "flickr"
+  },
+  "manifesto": {
+    "src": "assets/img/manifesto.jpg",
+    "title": "Curiosity Parachute Landing Spotted by NASA Orbiter [detail]",
+    "creator": "NASA Goddard Photo and Video",
+    "creator_url": "https://www.flickr.com/photos/24662369@N07",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/24662369@N07/7727084278",
+    "source": "nasa"
+  },
+  "manifesto": {
+    "src": "assets/img/manifesto.jpg",
+    "title": "Anne Truitt's 1974 '17th Summer,' With A View Of Norman Foster's Atrium At The Smithsonian Museum Of American Art (Washington, DC)",
+    "creator": "takomabibelot",
+    "creator_url": "https://www.flickr.com/photos/38782010@N00",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/38782010@N00/2270652889",
+    "source": "flickr"
+  }
+}

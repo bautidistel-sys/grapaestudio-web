@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GRAPA • arquitectura | diseño de interiores</title>
+  <meta name="description" content="Estudio boutique de arquitectura y diseño de interiores. Proyectos residenciales y comerciales en Argentina. Contacto: proyectos@grapaestudio.com" />
+  <meta name="keywords" content="arquitectura, diseño de interiores, estudio de arquitectura, Buenos Aires, CABA, reforma, interiorismo, GRAPA" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GRAPA • arquitectura | diseño de interiores" />
+  <meta property="og:description" content="Estudio boutique de arquitectura y diseño de interiores en Argentina. Proyectos que escuchan a la persona que los va a habitar." />
+  <meta property="og:image" content="assets/img/hero.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://grapaestudio.com" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css?v=20260514" />
+</head>
+<body>
+
+  <!-- ═══════════════════════ CURSOR ═══════════════════════ -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+  </div>
+
+  <!-- ═══════════════════════ NAV ═══════════════════════ -->
+  <header class="nav" id="nav">
+    <a href="#inicio" class="nav-logo" aria-label="GRAPA inicio">
+      <span class="nav-logo-text">GRAPA</span>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="nav-links" role="navigation" aria-label="Navegación principal">
+      <a href="#nosotros" class="nav-link">Nosotros</a>
+      <a href="#servicios" class="nav-link">Servicios</a>
+      <a href="#proyectos" class="nav-link">Proyectos</a>
+      <a href="#proceso" class="nav-link">Proceso</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section class="hero" id="inicio" aria-label="Inicio">
+    <div class="hero-bg">
+      <img
+        src="assets/img/hero.jpg"
+        alt="Interior arquitectónico con luz natural y líneas limpias"
+        class="hero-img"
+        loading="eager"
+      />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-kicker reveal">arquitectura · interiorismo</p>
+      <h1 class="hero-title">
+        <span class="reveal" data-delay="0.1">Cada espacio</span>
+        <span class="reveal italic" data-delay="0.22">tiene una idea adentro.</span>
+        <span class="reveal" data-delay="0.34">Nosotros la encontramos.</span>
+      </h1>
+      <a href="#contacto" class="btn-primary reveal" data-delay="0.5">
+        Contanos tu proyecto
+      </a>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span class="hero-scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ MANIFIESTO ═══════════════════════ -->
+  <section class="manifesto" id="nosotros" aria-label="Sobre GRAPA">
+    <div class="container manifesto-grid">
+      <div class="manifesto-image-wrap">
+        <img
+          src="assets/img/manifesto.jpg"
+          alt="Detalle arquitectónico con luz natural"
+          class="manifesto-img"
+          loading="lazy"
+        />
+      </div>
+      <div class="manifesto-text">
+        <p class="section-label reveal">Sobre nosotros</p>
+        <h2 class="manifesto-title reveal">
+          Escuchar primero.<br /><em>Proyectar después.</em>
+        </h2>
+        <p class="manifesto-body reveal" data-delay="0.08">
+          GRAPA nació de la convicción de que el diseño bien pensado no es un lujo —
+          es la diferencia entre un espacio que funciona y uno que te cambia.
+          Trabajamos en arquitectura e interiorismo con la misma lógica: entender
+          primero a la persona que va a habitar el espacio, y proyectar desde ahí.
+        </p>
+        <p class="manifesto-body reveal" data-delay="0.14">
+          Cada proyecto comienza desde el diálogo. No llegamos con soluciones
+          predefinidas. Llegamos con preguntas, con lápiz y con tiempo para escuchar.
+          Eso nos permite diseñar espacios que tienen sentido propio — que no podrían
+          ser de otro modo.
+        </p>
+        <p class="manifesto-body reveal" data-delay="0.2">
+          Trabajamos con materiales de calidad, proporciones pensadas y una atención
+          al detalle que no cede ante los plazos. Porque creemos que los espacios
+          bien resueltos perduran.
+        </p>
+        <div class="manifesto-values reveal" data-delay="0.28">
+          <span>Atención al detalle</span>
+          <span>Proceso colaborativo</span>
+          <span>Materiales nobles</span>
+          <span>Diseño atemporal</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SERVICIOS ═══════════════════════ -->
+  <section class="servicios" id="servicios" aria-label="Servicios">
+    <div class="container">
+      <p class="section-label reveal">Lo que hacemos</p>
+      <h2 class="section-title reveal">Servicios</h2>
+      <div class="servicios-grid">
+
+        <article class="servicio-card reveal" data-delay="0.05">
+          <div class="servicio-num" aria-hidden="true">01</div>
+          <h3 class="servicio-title">Arquitectura</h3>
+          <p class="servicio-body">
+            Proyecto integral desde el anteproyecto hasta la dirección de obra.
+            Viviendas, reformas, ampliaciones. Entregamos planos completos, renders
+            3D y acompañamiento en cada etapa.
+          </p>
+          <div class="servicio-line" aria-hidden="true"></div>
+        </article>
+
+        <article class="servicio-card reveal" data-delay="0.12">
+          <div class="servicio-num" aria-hidden="true">02</div>
+          <h3 class="servicio-title">Diseño de Interiores</h3>
+          <p class="servicio-body">
+            Transformación de espacios existentes con criterio estético y funcional.
+            Selección de materiales, mobiliario, iluminación y paleta cromática.
+            Residencial y comercial.
+          </p>
+          <div class="servicio-line" aria-hidden="true"></div>
+        </article>
+
+        <article class="servicio-card reveal" data-delay="0.19">
+          <div class="servicio-num" aria-hidden="true">03</div>
+          <h3 class="servicio-title">Consultoría de Proyecto</h3>
+          <p class="servicio-body">
+            Para quienes tienen una idea y necesitan orientación profesional antes
+            de avanzar. Una sesión de diagnóstico para definir alcance, estilo y
+            presupuesto estimado.
+          </p>
+          <div class="servicio-line" aria-hidden="true"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ PROYECTOS ═══════════════════════ -->
+  <section class="proyectos" id="proyectos" aria-label="Proyectos">
+    <div class="container">
+      <p class="section-label reveal">Nuestro trabajo</p>
+      <h2 class="section-title reveal">Proyectos</h2>
+
+      <div class="proyectos-filter reveal" role="group" aria-label="Filtrar proyectos">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="vivienda">Vivienda</button>
+        <button class="filter-btn" data-filter="interiorismo">Interiorismo</button>
+        <button class="filter-btn" data-filter="reforma">Reforma</button>
+        <button class="filter-btn" data-filter="comercial">Comercial</button>
+      </div>
+
+      <div class="proyectos-grid">
+
+        <article class="proyecto-card" data-cat="vivienda">
+          <div class="proyecto-img-wrap">
+            <img src="assets/img/proj-palermo.jpg" alt="Casa Palermo — vivienda en CABA" loading="lazy" />
+            <div class="proyecto-overlay">
+              <p class="proyecto-overlay-name">Casa Palermo</p>
+              <p class="proyecto-overlay-meta">Vivienda · CABA · 2023</p>
+            </div>
+          </div>
+          <div class="proyecto-info">
+            <h3>Casa Palermo</h3>
+            <p>Vivienda <span aria-hidden="true">·</span> CABA <span aria-hidden="true">·</span> 2023</p>
+          </div>
+        </article>
+
+        <article class="proyecto-card" data-cat="interiorismo">
+          <div class="proyecto-img-wrap">
+            <img src="assets/img/proj-loft.jpg" alt="Loft San Telmo — interiorismo" loading="lazy" />
+            <div class="proyecto-overlay">
+              <p class="proyecto-overlay-name">Loft San Telmo</p>
+              <p class="proyecto-overlay-meta">Interiorismo · CABA · 2024</p>
+            </div>
+          </div>
+          <div class="proyecto-info">
+            <h3>Loft San Telmo</h3>
+            <p>Interiorismo <span aria-hidden="true">·</span> CABA <span aria-hidden="true">·</span> 2024</p>
+          </div>
+        </article>
+
+        <article class="proyecto-card" data-cat="reforma">
+          <div class="proyecto-img-wrap">
+            <img src="assets/img/proj-estudio.jpg" alt="Estudio Córdoba — reforma" loading="lazy" />
+            <div class="proyecto-overlay">
+              <p class="proyecto-overlay-name">Estudio Córdoba</p>
+              <p class="proyecto-overlay-meta">Reforma · Córdoba · 2022</p>
+            </div>
+          </div>
+          <div class="proyecto-info">
+            <h3>Estudio Córdoba</h3>
+            <p>Reforma <span aria-hidden="true">·</span> Córdoba <span aria-hidden="true">·</span> 2022</p>
+          </div>
+        </article>
+
+        <article class="proyecto-card" data-cat="comercial">
+          <div class="proyecto-img-wrap">
+            <img src="assets/img/proj-local.jpg" alt="Local Palermo Soho — comercial" loading="lazy" />
+            <div class="proyecto-overlay">
+              <p class="proyecto-overlay-name">Local Palermo Soho</p>
+              <p class="proyecto-overlay-meta">Comercial · CABA · 2023</p>
+            </div>
+          </div>
+          <div class="proyecto-info">
+            <h3>Local Palermo Soho</h3>
+            <p>Comercial <span aria-hidden="true">·</span> CABA <span aria-hidden="true">·</span> 2023</p>
+          </div>
+        </article>
+
+        <article class="proyecto-card" data-cat="vivienda">
+          <div class="proyecto-img-wrap">
+            <img src="assets/img/proj-countries.jpg" alt="Casa en Countries — vivienda GBA Norte" loading="lazy" />
+            <div class="proyecto-overlay">
+              <p class="proyecto-overlay-name">Casa en Countries</p>
+              <p class="proyecto-overlay-meta">Vivienda · GBA Norte · 2024</p>
+            </div>
+          </div>
+          <div class="proyecto-info">
+            <h3>Casa en Countries</h3>
+            <p>Vivienda <span aria-hidden="true">·</span> GBA Norte <span aria-hidden="true">·</span> 2024</p>
+          </div>
+        </article>
+
+        <article class="proyecto-card" data-cat="interiorismo">
+          <div class="proyecto-img-wrap">
+            <img src="assets/img/proj-recoleta.jpg" alt="Departamento Recoleta — interiorismo" loading="lazy" />
+            <div class="proyecto-overlay">
+              <p class="proyecto-overlay-name">Departamento Recoleta</p>
+              <p class="proyecto-overlay-meta">Interiorismo · CABA · 2023</p>
+            </div>
+          </div>
+          <div class="proyecto-info">
+            <h3>Departamento Recoleta</h3>
+            <p>Interiorismo <span aria-hidden="true">·</span> CABA <span aria-hidden="true">·</span> 2023</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ PROCESO ═══════════════════════ -->
+  <section class="proceso" id="proceso" aria-label="Proceso de trabajo">
+    <div class="container">
+      <p class="section-label proceso-anim">Cómo trabajamos</p>
+      <h2 class="section-title proceso-anim">El proceso</h2>
+      <div class="proceso-grid">
+
+        <div class="proceso-step proceso-anim" data-delay="0.06">
+          <div class="proceso-num" aria-hidden="true">01</div>
+          <h3 class="proceso-step-title">Escucha</h3>
+          <p class="proceso-step-body">
+            Una primera reunión donde entendemos quién sos y cómo querés
+            vivir o usar el espacio. Sin apuros. Sin propuestas prematuras.
+          </p>
+        </div>
+
+        <div class="proceso-step proceso-anim" data-delay="0.14">
+          <div class="proceso-num" aria-hidden="true">02</div>
+          <h3 class="proceso-step-title">Proyecto</h3>
+          <p class="proceso-step-body">
+            Anteproyecto con renders, planos y selección de materiales.
+            Un documento claro que muestra adónde vamos antes de comprometer
+            un solo peso.
+          </p>
+        </div>
+
+        <div class="proceso-step proceso-anim" data-delay="0.22">
+          <div class="proceso-num" aria-hidden="true">03</div>
+          <h3 class="proceso-step-title">Ajuste</h3>
+          <p class="proceso-step-body">
+            Refinamos cada detalle juntos hasta que el proyecto sea exactamente
+            lo que necesitás. El diálogo no termina en la primera propuesta.
+          </p>
+        </div>
+
+        <div class="proceso-step proceso-anim" data-delay="0.30">
+          <div class="proceso-num" aria-hidden="true">04</div>
+          <h3 class="proceso-step-title">Ejecución</h3>
+          <p class="proceso-step-body">
+            Dirección de obra o acompañamiento en la implementación, según
+            el caso. Estamos hasta que el espacio esté terminado.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ TESTIMONIOS ═══════════════════════ -->
+  <section class="testimonios" aria-label="Testimonios">
+    <div class="container">
+      <p class="section-label reveal">Lo que dicen</p>
+      <div class="testimonios-grid">
+
+        <blockquote class="testimonio reveal" data-delay="0.04">
+          <p class="testimonio-texto">
+            "El proceso con GRAPA fue muy distinto a lo que esperábamos. Nos
+            escucharon de verdad antes de proponer. El resultado superó lo que
+            habíamos imaginado."
+          </p>
+          <footer class="testimonio-autor">
+            <strong>Valentina R.</strong>
+            <span>Buenos Aires · Reforma integral de vivienda</span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonio reveal" data-delay="0.1">
+          <p class="testimonio-texto">
+            "Teníamos un espacio con mucho potencial y no sabíamos cómo
+            aprovecharlo. GRAPA lo vio enseguida. Tres meses después tenemos
+            el departamento que siempre quisimos."
+          </p>
+          <footer class="testimonio-autor">
+            <strong>Martín y Lucía P.</strong>
+            <span>CABA · Diseño de interiores</span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonio reveal" data-delay="0.16">
+          <p class="testimonio-texto">
+            "Profesionalismo y atención a los detalles que no encontramos en
+            otros estudios. Cada decisión tenía un porqué."
+          </p>
+          <footer class="testimonio-autor">
+            <strong>Diego F.</strong>
+            <span>Córdoba · Consultoría + proyecto de vivienda</span>
+          </footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CONTACTO ═══════════════════════ -->
+  <section class="contacto" id="contacto" aria-label="Contacto">
+    <div class="container contacto-grid">
+      <div class="contacto-intro">
+        <p class="section-label reveal">Hablemos</p>
+        <h2 class="section-title reveal">
+          ¿Tenés un espacio<br /><em>en mente?</em>
+        </h2>
+        <p class="contacto-sub reveal">
+          Contanos. La primera conversación es sin costo y sin compromiso.
+        </p>
+        <div class="contacto-datos reveal" data-delay="0.1">
+          <a href="mailto:proyectos@grapaestudio.com" class="contacto-dato">
+            <span class="dato-label">Email</span>
+            <span class="dato-val">proyectos@grapaestudio.com</span>
+          </a>
+          <a href="https://instagram.com/grapa_estudio" target="_blank" rel="noopener noreferrer" class="contacto-dato">
+            <span class="dato-label">Instagram</span>
+            <span class="dato-val">@grapa_estudio</span>
+          </a>
+        </div>
+      </div>
+
+      <form
+        class="contacto-form reveal"
+        data-delay="0.06"
+        action="https://formspree.io/f/proyectos@grapaestudio.com"
+        method="POST"
+        novalidate
+      >
+        <div class="form-row">
+          <label class="form-field">
+            <span class="form-label">Nombre</span>
+            <input type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name" />
+          </label>
+          <label class="form-field">
+            <span class="form-label">Email</span>
+            <input type="email" name="email" placeholder="tu@email.com" required autocomplete="email" />
+          </label>
+        </div>
+        <label class="form-field">
+          <span class="form-label">Teléfono</span>
+          <input type="tel" name="telefono" placeholder="+54 9 11 XXXX-XXXX" autocomplete="tel" />
+        </label>
+        <label class="form-field">
+          <span class="form-label">Tipo de proyecto</span>
+          <select name="tipo_proyecto" required>
+            <option value="" disabled selected>Seleccioná una opción</option>
+            <option value="Vivienda">Vivienda</option>
+            <option value="Interiorismo">Interiorismo</option>
+            <option value="Reforma">Reforma</option>
+            <option value="Comercial">Comercial</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </label>
+        <label class="form-field">
+          <span class="form-label">Mensaje</span>
+          <textarea name="mensaje" placeholder="Contanos sobre tu espacio, qué tenés en mente y cuándo querés empezar..." rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn-submit">
+          <span class="btn-submit-text">Enviar mensaje</span>
+          <span class="btn-submit-sending" aria-hidden="true">Enviando…</span>
+          <span class="btn-submit-ok" aria-hidden="true">¡Mensaje enviado!</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">GRAPA</span>
+        <span class="footer-tagline">arquitectura | diseño de interiores</span>
+      </div>
+      <nav class="footer-nav" aria-label="Pie de página">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="mailto:proyectos@grapaestudio.com">proyectos@grapaestudio.com</a>
+        <a href="https://instagram.com/grapa_estudio" target="_blank" rel="noopener noreferrer">@grapa_estudio</a>
+      </div>
+      <p class="footer-copy">© 2025 GRAPA Estudio. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════ WHATSAPP ═══════════════════════ -->
+  <!--
+    CAMBIAR NÚMERO: reemplazá el número de abajo por el real.
+    Formato: código de país + código de área + número, sin espacios ni guiones.
+    Ejemplo Argentina: 5491112345678 (54 = país, 9 = celular, 11 = area, 12345678 = número)
+  -->
+  <a
+    href="https://wa.me/5491100000000?text=Hola%20GRAPA%2C%20me%20gustar%C3%ADa%20contarles%20sobre%20mi%20proyecto."
+    class="whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- Scripts -->
+  <script defer src="lib/gsap.min.js"></script>
+  <script defer src="lib/ScrollTrigger.min.js"></script>
+  <script defer src="main.js?v=20260514"></script>
+</body>
+</html>
